@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "74553af1-a074-4331-a39b-eb89ea31e789",
+		"name": "[L2L] - SAP-RPT-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8437576"
+	},
+	"item": [
+		{
+			"name": "Predict",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"rows\": [\n    {\n      \"customer_id\": \"C001\",\n      \"age\": 35,\n      \"subscription_months\": 12,\n      \"churn\": \"No\"\n    },\n    {\n      \"customer_id\": \"C042\",\n      \"age\": 20,\n      \"subscription_months\": 1,\n      \"churn\": \"Yes\"\n    },\n    {\n      \"customer_id\": \"C002\",\n      \"age\": 28,\n      \"subscription_months\": 3,\n      \"churn\": \"[PREDICT]\"\n    }\n  ],\n  \"index_column\": \"customer_id\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rpt.cloud.sap/api/predict",
+					"protocol": "https",
+					"host": [
+						"rpt",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"api",
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
