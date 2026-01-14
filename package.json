@@ -1,0 +1,28 @@
+{
+  "name": "fiori-sales-rpt1",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-saleshistory": "cds watch --open saleshistory/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-salesprediction": "cds watch --open salesprediction/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/saleshistory",
+    "app/salesprediction"
+  ]
+}
